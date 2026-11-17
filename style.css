@@ -2,7 +2,7 @@
   --main: #1B5E7A;
   --ink: #222;
   --sub: #595959;
-  --bg: #fdfdfd;
+  --bg: #fff;
   --light: #E8F2F6;
   --accent: #F2A33A;
   --avatar-bg: #A9CBDA;
@@ -70,24 +70,30 @@ h1 {
   margin: 0;
 }
 /* 画像：定義文＝1：2。定義文の箱は縦中央に置く */
-.intro-with-img {
+/* 画像と定義文を、ひとつの背景色の箱にする */
+.intro.intro-with-img {
   display: grid;
   grid-template-columns: minmax(0, 1fr) minmax(0, 2fr);
   align-items: center;
   gap: 24px;
+  background: var(--light);
+  border-left: 6px solid var(--accent);
+  padding: 16px 20px;
 }
 .intro-img {
   display: block;
   width: 100%;
   height: auto;
-  mix-blend-mode: multiply;
 }
 .intro-with-img .def {
   min-width: 0;
+  background: none;
+  border-left: 0;
+  padding: 0;
 }
 /* スマホ：画像を定義文の上に置く */
 @media (max-width: 768px) {
-  .intro-with-img {
+  .intro.intro-with-img {
     grid-template-columns: 1fr;
     gap: 16px;
   }
