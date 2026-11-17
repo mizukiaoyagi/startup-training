@@ -1,0 +1,365 @@
+:root {
+  --main: #1B5E7A;
+  --ink: #222;
+  --sub: #595959;
+  --bg: #fdfdfd;
+  --light: #E8F2F6;
+  --accent: #F2A33A;
+  --avatar-bg: #A9CBDA;
+  /* PC */
+  --pad-y: 128px;
+  --pad-x: 128px;
+  --fs: 16px;
+  --avatar: 64px;
+  --band-y: 80px;
+}
+/* タブレット */
+@media (max-width: 1024px) {
+  :root {
+    --pad-y: 64px;
+    --pad-x: 32px;
+    --fs: 16px;
+    --avatar: 56px;
+    --band-y: 56px;
+  }
+}
+/* スマホ */
+@media (max-width: 600px) {
+  :root {
+    --pad-y: 32px;
+    --pad-x: 16px;
+    --fs: 16px;
+    --avatar: 48px;
+    --band-y: 40px;
+  }
+}
+* {
+  box-sizing: border-box;
+}
+html {
+  -webkit-text-size-adjust: 100%;
+}
+body {
+  margin: 0;
+  font-family: "Meiryo UI", Meiryo, "Hiragino Sans", "Noto Sans JP", system-ui, sans-serif;
+  color: var(--ink);
+  background: var(--bg);
+  line-height: 1.8;
+  font-size: var(--fs);
+  overflow-wrap: anywhere;
+}
+header {
+  background: var(--main);
+  color: #fff;
+  padding: clamp(28px, 4vw, 48px) 0;
+}
+.wrap {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 var(--pad-x);
+}
+h1 {
+  font-size: 1.9em;
+  line-height: 1.4;
+  margin: 0 0 16px;
+}
+.lead {
+  font-size: clamp(1.2em, 2.2vw, 1.5em);
+  font-weight: 700;
+  opacity: .95;
+  margin: 0;
+}
+/* 画像：定義文＝1：2。定義文の箱は縦中央に置く */
+.intro-with-img {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 2fr);
+  align-items: center;
+  gap: 24px;
+}
+.intro-img {
+  display: block;
+  width: 100%;
+  height: auto;
+  mix-blend-mode: multiply;
+}
+.intro-with-img .def {
+  min-width: 0;
+}
+/* スマホ：画像を定義文の上に置く */
+@media (max-width: 768px) {
+  .intro-with-img {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+  .intro-img {
+    display: block;
+    width: 100%;
+    max-width: 320px;
+    height: auto;
+    margin: 0 auto;
+  }
+}
+.def p { margin: 0; }
+.def p + p { margin-top: .8em; }
+.def {
+  background: var(--light);
+  border-left: 6px solid var(--accent);
+  padding: 16px 20px;
+  margin: 0;
+}
+section {
+  padding: var(--band-y) 0;
+}
+h2 {
+  font-size: 1.4em;
+  line-height: 1.5;
+  color: var(--main);
+  margin: 0 0 32px;
+}
+.num {
+  display: inline-block;
+  background: var(--main);
+  color: #fff;
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  line-height: 32px;
+  text-align: center;
+  font-size: 16px;
+  margin-right: 10px;
+  vertical-align: middle;
+}
+blockquote {
+  margin: 16px 0;
+  padding: 16px 20px;
+  background: var(--light);
+  border-radius: 8px;
+}
+blockquote cite {
+  display: block;
+  font-style: normal;
+  color: var(--sub);
+  font-size: .9em;
+  margin-top: 8px;
+}
+.stat {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 16px;
+  margin: 16px 0;
+}
+.stat div {
+  background: var(--light);
+  padding: 16px;
+  border-radius: 8px;
+}
+.stat b {
+  display: block;
+  font-size: 2em;
+  color: var(--accent);
+  line-height: 1.2;
+}
+.stat small {
+  color: var(--sub);
+  font-size: 1em;
+  line-height: 1.6;
+  display: block;
+  margin-top: 6px;
+}
+.src {
+  font-size: .875em;
+  color: var(--sub);
+}
+.wall {
+  display: grid;
+  gap: 12px;
+}
+.wall div {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 14px 16px;
+}
+.wall b {
+  display: block;
+  color: var(--accent);
+  font-size: 1.25em;
+  line-height: 1.5;
+  margin-bottom: 4px;
+}
+.direction {
+  background: #fff;
+  border: 2px solid var(--accent);
+  border-radius: 8px;
+  padding: 20px;
+}
+.cta {
+  background: var(--main);
+  color: #fff;
+  padding: var(--pad-y) 0;
+  text-align: center;
+}
+.cta h2 {
+  color: #fff;
+}
+.btn {
+  display: inline-block;
+  background: var(--accent);
+  color: #222;
+  font-weight: bold;
+  padding: 16px 28px;
+  border-radius: 999px;
+  text-decoration: none;
+  font-size: 1.1em;
+  margin-top: 12px;
+  max-width: 100%;
+}
+.btn.sub {
+  background: transparent;
+  color: #fff;
+  border: 2px solid #fff;
+  font-weight: normal;
+  font-size: 1em;
+}
+.btn {
+  transition: background-color .2s;
+}
+.btn:hover,
+.btn:focus-visible {
+  background: #DB8B1A;
+}
+.btn.sub:hover,
+.btn.sub:focus-visible {
+  background: rgba(255, 255, 255, .18);
+}
+footer {
+  padding: 24px var(--pad-x);
+  font-size: .875em;
+  color: var(--sub);
+  text-align: center;
+}
+details {
+  margin: 8px 0;
+  padding: 8px 0;
+  border-bottom: 1px dashed #ddd;
+}
+summary {
+  cursor: pointer;
+  font-weight: bold;
+}
+.voice {
+  display: flex;
+  gap: 14px;
+  align-items: flex-start;
+  margin: 16px 0;
+}
+.avatar {
+  flex: 0 0 var(--avatar);
+  width: var(--avatar);
+  height: var(--avatar);
+  border-radius: 50%;
+  background: var(--avatar-bg);
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.avatar img {
+  width: 100%;
+  padding: 18%;
+  height: 100%;
+  object-fit: contain;
+}
+.voice blockquote {
+  margin: 0;
+  flex: 1;
+  position: relative;
+  padding: 16px 18px;
+}
+.voice blockquote::before {
+  content: "";
+  position: absolute;
+  left: -9px;
+  top: 18px;
+  border: 9px solid transparent;
+  border-left: 0;
+  border-right-color: var(--light);
+}
+.voice .lines {
+  margin: 0;
+  font-size: 1em;
+  line-height: 1.8;
+}
+.voice .lines span {
+  display: block;
+}
+.voice .lines span+span {
+  margin-top: 10px;
+}
+.full {
+  margin-top: 12px;
+  border-top: 1px dashed #b9cdd6;
+  padding-top: 8px;
+}
+.full summary {
+  font-weight: normal;
+  color: var(--main);
+  font-size: .95em;
+}
+.full p {
+  margin: 8px 0 0;
+  font-size: .95em;
+  color: var(--sub);
+  line-height: 1.9;
+}
+.cta .num {
+  background: #fff;
+  color: var(--main);
+}
+.cta-sub {
+  margin-top: 16px;
+}
+/* スマホ：細部の調整 */
+@media (max-width: 600px) {
+  .voice {
+    gap: 10px;
+  }
+  .btn {
+    padding: 14px 20px;
+  }
+}
+.mark {
+  background: linear-gradient(transparent 62%, var(--accent) 62%);
+}
+/* 本文の幅（背景は白） */
+main {
+  padding: var(--band-y) 0;
+}
+.intro,
+.band {
+  width: min(calc(100% - var(--pad-x) * 2), 1024px);
+  max-width: none;
+  margin: 0 auto;
+  padding: 0;
+}
+.band {
+  padding: calc(var(--band-y) / 2) 0;
+}
+.band > .wrap {
+  max-width: none;
+  padding: 0;
+}
+/* タイトルの背景 */
+h2 {
+  background: var(--main);
+  color: #fff;
+  padding: 10px 16px;
+  border-radius: 0;
+}
+h2 .num {
+  background: #fff;
+  color: var(--main);
+}
+.cta h2 {
+  background: none;
+  padding: 0;
+}
