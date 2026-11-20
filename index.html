@@ -3,185 +3,153 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- ▼ 検索・SNS用タグ（第6回「タグの付け方」参照） -->
-    <title>先生の長時間労働｜今の取り組みでも残る「細かな作業」を効率化していく</title>
-    <meta
-      name="description"
-      content="自動採点や校務支援システムが進んでも、解答用紙づくりや各種の申し込みなど、細かな作業は先生の手に残っています。先生の長時間労働との関係を整理し、短くする方法を考えています。">
+    <meta name="theme-color" content="#2563A8">
+    <title>解答用紙づくりで終わる放課後を、生徒と関わる時間に。</title>
+    <meta name="description" content="問題番号・模範解答・配点を入力するだけで、解答用紙と模範解答を同時に作れる先生向けの試作ツールです。Excel・PDF・印刷に対応。入力内容はこのパソコンの外に送信されません。">
     <link rel="canonical" href="https://sensei-work.vercel.app/">
     <meta property="og:type" content="website">
-    <meta property="og:title" content="先生の長時間労働｜今の取り組みでも残る「細かな作業」を効率化していく">
-    <meta property="og:description" content="自動採点や校務支援システムが進んでも、解答用紙づくりや各種の申し込みなど、細かな作業は先生の手に残っています。先生の長時間労働との関係を整理し、短くする方法を考えています。">
-    <meta property="og:image" content="https://sensei-work.vercel.app/ogp.png">
+    <meta property="og:site_name" content="解答用紙づくりで終わる放課後を、生徒と関わる時間に。">
+    <meta property="og:locale" content="ja_JP">
+    <meta property="og:title" content="解答用紙づくりで終わる放課後を、生徒と関わる時間に。">
+    <meta property="og:description" content="問題番号・模範解答・配点を入力するだけで、解答用紙と模範解答を同時に作成。Excel・PDF・印刷に対応。">
+    <meta property="og:image" content="https://sensei-work.vercel.app/images/ogp.png">
     <meta property="og:url" content="https://sensei-work.vercel.app/">
     <meta name="twitter:card" content="summary_large_image">
-    <script type="application/ld+json">
-      {
-        "@context": "https://schema.org",
-        "@type": "FAQPage",
-        "mainEntity": [
-          {
-            "@type": "Question",
-            "name": "このサイトは誰が運営していますか？",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "千葉大学「スタートアップトレーニングⅡ」の受講生が、学習の一環として作成しています。営利目的の勧誘は行いません。"
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "どんなことを訊かれますか？",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "普段のお仕事の中で、どの作業に時間がかかっているか、今はどのように進めているかを伺います。30分、オンラインで、答えにくいことは答えなくて大丈夫です。"
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "話を聞かせると、何に使われますか？",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "課題の理解を深めるためだけに使い、お名前や学校名など、特定できる情報は公開しません。"
-            }
-          }
-        ]
-      }
-    </script>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="/colors.css">
+    <link rel="stylesheet" href="/base.css">
+    <link rel="stylesheet" href="/lp.css">
   </head>
   <body>
-    <header>
+    <header class="hero">
       <div class="wrap">
-        <h1>先生の長時間労働</h1>
-        <p class="lead">今の取り組みでも残る「細かな作業」を効率化していく</p>
+        <div class="in">
+          <h1><span>解答用紙づくりで終わる放課後</span>を、<br>生徒と関わる時間に。</h1>
+          <div class="hero-cta">
+            <a class="btn" href="https://answersheet-maker.vercel.app/" target="_blank" rel="noopener">
+              無料で利用する
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M9 5l7 7-7 7"/>
+              </svg>
+            </a>
+            <p class="small">登録もお名前も不要です。</p>
+          </div>
+        </div>
       </div>
     </header>
+
     <main>
-      <div class="wrap intro intro-with-img">
-        <div class="intro-imgbox">
-          <img class="intro-img" src="talk.jpg" alt="先生が生徒と向き合って話しているイラスト" width="1200" height="800">
+      <section>
+        <h2>
+          <span class="ic"><span class="icon icon-people"></span></span>
+          こんな方のためのページです
+        </h2>
+        <div class="cards cards-pop">
+          <div class="card card-flow">
+            <img src="/images/coach.png" alt="部活動で生徒に声をかける先生のイラスト" width="1536" height="1024" loading="lazy">
+            <p><span>テストや解答用紙づくりに、</span><span>放課後を取られている中学・高校の先生</span></p>
+          </div>
+          <div class="card card-flow">
+            <img src="/images/class.png" alt="先生が生徒と笑顔で話しているイラスト" width="1536" height="1024" loading="lazy">
+            <p><span>生徒の記述や作文に、</span><span>もっとコメントを返したいと思っている先生</span></p>
+          </div>
+          <div class="card card-flow">
+            <img src="/images/work.png" alt="笑顔でパソコンに向かう先生のイラスト" width="1358" height="1159" loading="lazy">
+            <p><span>管理職・事務職員・支援員など、</span><span>学校で先生を支える立場の方</span></p>
+          </div>
         </div>
-        <div class="def">
-          <p>
-            <strong>2017年に教員勤務実態調査の結果が公表され、先生の長時間労働が広く知られてから、約10年が経ちました。</strong>
-            自動採点や校務支援システムなどが進み、一定の改善が見られるものの、週50時間以上学校にいる中学校の先生は77.1%います。
-            先生が必ずしもやらなくてもよい業務も、まだ切り分け切れていません。
-          </p>
+      </section>
+
+      <section>
+        <h2>
+          <span class="ic"><span class="icon icon-hand"></span></span>
+          いま起きていること
+        </h2>
+        <div class="voice">
+          「採点は自動採点で便利になりました。でも、解答用紙は自分で作っているので、結構時間がかかっています。」
+          <cite>24歳・高校の国語の先生／インタビューより、匿名で掲載</cite>
         </div>
+        <div class="stat">
+          <div>
+            <b>77.1%</b>
+            <small>週50時間以上、学校にいる中学校の先生の割合（平日1日の在校等時間は平均11時間1分）</small>
+          </div>
+          <div>
+            <b>7,087人</b>
+            <small>精神疾患で休職した先生の数（全教育職員の0.77%）</small>
+          </div>
+          <div>
+            <b>2.9倍</b>
+            <small>公立学校の先生の採用倍率。4年連続で過去最低、受験者数は12年連続で減少</small>
+          </div>
+        </div>
+        <p class="src">出典：文部科学省「教員勤務実態調査（令和4年度）」（2023年公表）／「令和6年度 公立学校教職員の人事行政状況調査」（2025年公表）／「令和7年度 公立学校教員採用選考試験の実施状況」｜<a href="/info/">この課題についてくわしく読む</a></p>
+      </section>
+
+      <section>
+        <h2>
+          <span class="ic"><span class="icon icon-idea"></span></span>
+          サービス紹介
+        </h2>
+        <div class="service">
+          <div class="cards">
+            <div class="card">
+              <b>入力するだけ</b>
+              問題番号・模範解答・配点を入力します。
+            </div>
+            <div class="card">
+              <b>解答欄を自動でレイアウト</b>
+              答えの長さに合わせて、解答欄の大きさと並びを自動で決めます。
+            </div>
+            <div class="card">
+              <b>解答用紙と模範解答を同時に</b>
+              Excel・PDF・印刷に対応しています。
+            </div>
+          </div>
+          <img src="/images/laptop.png" alt="解答用紙メーカーの画面。左で問題番号・模範解答・配点を入力し、右で解答用紙のプレビューを確認できます" width="2548" height="1421" loading="lazy">
+        </div>
+      </section>
+
+      <div class="try">
+        <h2>
+          無料でお試しいただけます
+        </h2>
+        <a class="btn" href="https://answersheet-maker.vercel.app/" target="_blank" rel="noopener">
+          無料で試してみる
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M9 5l7 7-7 7"/>
+          </svg>
+        </a>
       </div>
-      <section id="story" class="band band-story">
-        <div class="wrap">
-          <h2><span class="num">1</span>ある先生の話</h2>
-          <div class="voice">
-            <div class="avatar">
-              <img src="teacher.svg" alt="" width="52" height="52">
-            </div>
-            <blockquote>
-              <p class="lines">
-                <span>「大会の申し込みには教頭と校長の許可が必要で、物品を買うだけでも保護者の同意書が必要で、時間がかかります。」</span>
-              </p>
-              <cite>24歳・高校の国語の先生／インタビューより、匿名で掲載</cite>
-            </blockquote>
-          </div>
-          <div class="voice">
-            <div class="avatar">
-              <img src="teacher.svg" alt="" width="52" height="52">
-            </div>
-            <blockquote>
-              <p class="lines">
-                <span>「採点は自動採点で便利になりました。でも、解答用紙は自分で作っているので、結構時間がかかっています。」</span>
-              </p>
-              <cite>同上</cite>
-            </blockquote>
-          </div>
-          <p>便利になった部分がある一方で、その手前にある細かな作業が、今も先生の手に残っている、ということでした。</p>
-        </div>
-      </section>
-      <section id="data" class="band band-data">
-        <div class="wrap">
-          <h2><span class="num">2</span>データで見る、この課題の大きさ</h2>
-          <div class="stat">
-            <div>
-              <b>77.1%</b>
-              <small>週50時間以上、学校にいる中学校の先生の割合（平日1日の在校等時間は平均11時間1分）</small>            </div>
-            <div>
-              <b>7,087人</b>
-              <small>精神疾患で休職した先生の数（全教育職員の0.77%）</small>            </div>
-            <div>
-              <b>2.9倍</b>
-              <small>公立学校の先生の採用倍率。4年連続で過去最低、受験者数は12年連続で減少</small>            </div>
-          </div>
-          <p>
-            週50時間以上学校にいる中学校の先生は77.1%にのぼり、長時間労働は今も残っています。
-            その負担の重さは、精神疾患で休職した先生が7,087人いることからも、働き方が過酷になっている可能性がうかがえます。
-            そうした中で、採用倍率は2.9倍と過去最低を更新し続けており、このままでは人手不足が進んで、
-            今いる先生の負担がさらに重くなるおそれがあります。
-          </p>
-          <p class="src">
-            出典：文部科学省「教員勤務実態調査（令和4年度）」（2023年公表）／「令和6年度 公立学校教職員の人事行政状況調査」（2025年公表）／「令和7年度 公立学校教員採用選考試験の実施状況」
-          </p>
-        </div>
-      </section>
-      <section id="why" class="band band-why">
-        <div class="wrap">
-          <h2><span class="num">3</span>なぜ、今まで解決されなかったのか</h2>
-          <div class="wall">
-            <div><b>制度の壁</b>長時間労働がコストに見えにくく、働く人とやり方を決める人が違う。</div>
-            <div><b>慣習の壁</b>「部活は先生が見るもの」「生徒のため」という空気で、早く帰りづらく、なくなる仕事は少ない。</div>
-            <div><b>現場の壁</b>学校全体でデジタル化を進めても、デジタルが苦手な先生もいて、全員が使えるわけではない。そのため、アナログとデジタルの両方で管理することになり、手間が残る。</div>
-          </div>
-          <p>
-            既存の取り組み（デジタル採点、校務支援システム、教員業務支援員、部活の地域展開）が進み、大きな仕事はだんだん改善しています。
-            しかし、解答用紙を作る作業や、教頭・校長の許可や保護者の同意書が必要な大会の申し込み、物品の購入といった細かな作業は、一つひとつが小さいため、大変さが日常になって見過ごされがちです。
-            だからこそ、先生個人でも工夫して短くできる余地が、まだあるのではないか、と感じています。
-          </p>
-        </div>
-      </section>
-      <section id="direction" class="band band-direction">
-        <div class="wrap">
-          <h2><span class="num">4</span>いま、私たちが考えている方向性</h2>
-          <div class="direction">
-            <p>私たちは、先生一人ひとりが少しでも効率的に働けるよう、細かな作業そのものを短くする方法を考えています。</p>
-            <p>たとえば、テストの解答用紙づくりのような作業が、もっと短くならないか、と考えています。</p>
-            <p>まだ仮説のため、現場の先生のお話を聞いて確かめたいと考えています。</p>
-          </div>
-        </div>
-      </section>
-      <section id="faq" class="band band-faq">
-        <div class="wrap">
-          <h2>よくある質問</h2>
-          <details>
-            <summary>このサイトは誰が運営していますか？</summary>
-            <p>千葉大学「スタートアップトレーニングⅡ」の受講生が、学習の一環として作成しています。営利目的の勧誘は行いません。</p>
-          </details>
-          <details>
-            <summary>どんなことを訊かれますか？</summary>
-            <p>普段のお仕事の中で、どの作業に時間がかかっているか、今はどのように進めているかを伺います。30分、オンラインで、答えにくいことは答えなくて大丈夫です。</p>
-          </details>
-          <details>
-            <summary>話を聞かせると、何に使われますか？</summary>
-            <p>課題の理解を深めるためだけに使い、お名前や学校名など、特定できる情報は公開しません。</p>
-          </details>
-        </div>
+
+      <section>
+        <h2>
+          <span class="ic"><span class="icon icon-question"></span></span>
+          よくある質問
+        </h2>
+        <details open>
+          <summary>料金はかかりますか？</summary>
+          <p>かかりません。登録もお名前も不要です。千葉大学の受講生が学習の一環として作っており、営利目的の勧誘は行いません。</p>
+        </details>
+        <details>
+          <summary>プライバシーは大丈夫？</summary>
+          <p>入力した問題番号・模範解答・配点などは、お使いのパソコンの外には送信されません。サーバーに送って保存することもありません。お話を伺った場合も、課題の理解を深めるためだけに使い、お名前や学校名など、特定できる情報は公開しません。</p>
+        </details>
+        <details>
+          <summary>このサイトは誰が運営していますか？</summary>
+          <p>千葉大学「スタートアップトレーニングⅡ」の受講生が、学習の一環として作成しています。営利目的の勧誘は行いません。</p>
+        </details>
       </section>
     </main>
-    <section class="cta" id="contact">
+
+    <div class="cta">
       <div class="wrap">
-        <h2><span class="num">5</span>話を聞かせてください</h2>
-        <p>
-          中学・高校の先生の方、学校で先生を支える立場の方（管理職・事務職員・支援員など）。<br>
-          30分、オンラインでお話を聞かせていただけませんか。
-        </p>
-        <a class="btn" href="https://docs.google.com/forms/d/e/1FAIpQLSfYlN2yhXe_DZUbkPfot3LasIRLzXZNetLwLGdEktz2A8xIyQ/viewform?usp=header" target="_blank" rel="noopener">
-          話を聞かせてください（30分・オンライン）
-        </a>
-        <p class="cta-sub">
-          <a class="btn sub" href="https://docs.google.com/forms/d/e/1FAIpQLSfYlN2yhXe_DZUbkPfot3LasIRLzXZNetLwLGdEktz2A8xIyQ/viewform?usp=header" target="_blank" rel="noopener">
-            同じ課題に取り組んでいる方はこちら
-          </a>
-        </p>
+        <h2>
+          話を聞かせてください
+        </h2>
+        <p>中学・高校の先生の方、学校で先生を支える立場の方（管理職・事務職員・支援員など）。<br>30分、オンラインでお話を聞かせていただけませんか。</p>
+        <a class="btn white" href="https://docs.google.com/forms/d/e/1FAIpQLSfYlN2yhXe_DZUbkPfot3LasIRLzXZNetLwLGdEktz2A8xIyQ/viewform?usp=header" target="_blank" rel="noopener">話を聞かせてください（30分・オンライン）</a>
       </div>
-    </section>
+    </div>
     <footer>千葉大学 スタートアップトレーニングⅡ 受講生が学習の一環として作成｜引用は出典を明記しています｜2026年11月</footer>
   </body>
 </html>

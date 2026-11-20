@@ -1,0 +1,239 @@
+:root {
+  --fs: 16px;
+}
+body {
+  line-height: 1.8;
+  font-size: var(--fs);
+}
+.title {
+  background: var(--main);
+  color: #fff;
+  padding: var(--edge-y) calc(var(--side) + var(--edge-x));
+  text-align: center;
+}
+.wrap {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 var(--pad-x);
+}
+h1 {
+  font-size: 1.9em;
+  line-height: 1.4;
+  margin: 0 0 16px;
+}
+.lead {
+  font-size: clamp(1.2em, 2.2vw, 1.5em);
+  font-weight: 700;
+  opacity: .95;
+  margin: 0;
+}
+.def p { margin: 0; }
+.def p + p { margin-top: .8em; }
+.def {
+  background: var(--light);
+  border-left: 6px solid var(--main);
+  padding: 16px 20px;
+  margin: 0;
+}
+h2 {
+  font-size: 1.4em;
+  line-height: 1.5;
+  background: var(--main);
+  color: #fff;
+  padding: 10px 16px;
+  margin: 0 0 32px;
+}
+.num {
+  display: inline-block;
+  background: #fff;
+  color: var(--main);
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  line-height: 32px;
+  text-align: center;
+  font-size: 16px;
+  margin-right: 10px;
+  vertical-align: middle;
+}
+blockquote {
+  margin: 16px 0;
+  padding: 16px 20px;
+  background: var(--light);
+  border-radius: 8px;
+}
+blockquote cite {
+  display: block;
+  font-style: normal;
+  color: var(--sub);
+  font-size: .9em;
+  margin-top: 8px;
+}
+.stat {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 16px;
+  margin: 16px 0;
+}
+.stat div {
+  background: var(--light);
+  padding: 16px;
+  border-radius: 8px;
+}
+.stat b {
+  display: block;
+  font-size: 2em;
+  color: var(--main);
+  line-height: 1.2;
+}
+.stat small {
+  color: var(--sub);
+  font-size: 1em;
+  line-height: 1.6;
+  display: block;
+  margin-top: 6px;
+}
+.src {
+  font-size: .875em;
+  color: var(--sub);
+}
+.wall {
+  display: grid;
+  gap: 16px;
+}
+.wall div {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 14px 16px;
+}
+.wall b {
+  display: block;
+  color: var(--main);
+  font-size: 1.25em;
+  line-height: 1.5;
+  margin-bottom: 4px;
+}
+.direction {
+  background: #fff;
+  border: 2px solid var(--main);
+  border-radius: 8px;
+  padding: 20px;
+}
+.cta {
+  padding: var(--edge-y) calc(var(--side) + var(--edge-x));
+}
+.cta .wrap {
+  max-width: none;
+  padding: 0;
+}
+.cta .wrap > :last-child {
+  margin-bottom: 0;
+}
+.cta h2 {
+  background: none;
+  padding: 0;
+  color: #fff;
+}
+.btn {
+  display: inline-block;
+  background: #fff;
+  color: var(--main);
+  padding: 16px 28px;
+  font-size: 1.1em;
+  margin-top: 12px;
+}
+.btn.sub {
+  background: transparent;
+  color: #fff;
+  border: 2px solid #fff;
+  font-weight: normal;
+  font-size: 1em;
+}
+.btn {
+  transition: background-color .2s;
+}
+.btn:hover,
+.btn:focus-visible {
+  background: var(--light);
+}
+.btn.sub:hover,
+.btn.sub:focus-visible {
+  background: rgba(255, 255, 255, .18);
+}
+footer {
+  padding: var(--edge-y) calc(var(--side) + var(--edge-x));
+  font-size: .875em;
+}
+details {
+  margin: 8px 0;
+  padding: 8px 0;
+  border-bottom: 1px dashed #ddd;
+}
+.voices {
+  display: grid;
+  gap: 16px;
+  margin: 16px 0;
+}
+.voice blockquote {
+  margin: 0;
+  flex: 1;
+  position: relative;
+  padding: 16px 18px;
+}
+.voice .lines {
+  margin: 0;
+  font-size: 1em;
+  line-height: 1.8;
+}
+.voice .lines span {
+  display: block;
+}
+.voice .lines span+span {
+  margin-top: 10px;
+}
+.full {
+  margin-top: 12px;
+  border-top: 1px dashed var(--mid);
+  padding-top: 8px;
+}
+.full summary {
+  font-weight: normal;
+  color: var(--main);
+  font-size: .95em;
+}
+.full p {
+  margin: 8px 0 0;
+  font-size: .95em;
+  color: var(--sub);
+  line-height: 1.9;
+}
+.cta .num {
+  background: #fff;
+  color: var(--main);
+}
+.cta-sub {
+  margin-top: 0;
+}
+@media (max-width: 600px) {
+  .btn {
+    padding: 14px 20px;
+  }
+}
+.mark {
+  background: linear-gradient(transparent 62%, var(--mid) 62%);
+}
+main {
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap);
+  padding: var(--pad-y) calc(var(--side) + var(--pad-x));
+}
+.intro {
+  max-width: none;
+  margin: 0;
+  padding: 0;
+}
+.band > .wrap {
+  max-width: none;
+  padding: 0;
+}
