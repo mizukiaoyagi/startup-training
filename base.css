@@ -1,0 +1,64 @@
+:root {
+  --bg: #fff;
+
+  /* レイアウトの値（余白・間隔・最大幅） */
+  --max: 1440px;
+  --side: max(0px, calc((100% - var(--max)) / 2));
+  --gap: clamp(32px, 5vw, 64px); /* セクションどうしの間隔（スマホ32px〜PC64px） */
+  --gap-sm: 24px; /* 小さめの間隔（帯と本文の間など） */
+  --edge-y: 24px; /* フッター・「話を聞かせてください」の帯の上下の余白 */
+  --edge-x: 44px; /* 同、左右の余白 */
+  --pad-y: 64px;  /* 本文（main）の上下の余白 */
+  --pad-x: 128px; /* 本文（main）の左右の余白 */
+}
+/* タブレット */
+@media (max-width: 1024px) {
+  :root {
+    --pad-y: 64px;
+    --pad-x: 32px;
+  }
+}
+/* スマホ */
+@media (max-width: 600px) {
+  :root {
+    --pad-y: 32px;
+    --pad-x: 16px;
+  }
+}
+* {
+  box-sizing: border-box;
+}
+html {
+  -webkit-text-size-adjust: 100%;
+}
+/* ページ全体 */
+body {
+  margin: 0;
+  font-family: "Meiryo UI", Meiryo, "Hiragino Sans", "Noto Sans JP", system-ui, sans-serif;
+  color: var(--ink);
+  background: var(--bg);
+  overflow-wrap: anywhere;
+}
+/* 開閉する見出し */
+summary {
+  cursor: pointer;
+  font-weight: bold;
+}
+/* ボタン */
+.btn {
+  border-radius: 999px;
+  font-weight: bold;
+  text-decoration: none;
+  max-width: 100%;
+}
+/* （話を聞かせてください）の帯 */
+.cta {
+  background: var(--main);
+  color: #fff;
+  text-align: center;
+}
+/* フッター */
+footer {
+  color: var(--sub);
+  text-align: center;
+}
