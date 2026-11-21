@@ -64,12 +64,19 @@ main {
   padding: 13px 26px;
   font-size: 17px;
   line-height: 1.5;
-  box-shadow: 0 4px 0 var(--deep);
+  transition: background-color .2s;
+}
+.btn:hover,
+.btn:focus-visible {
+  background: var(--deep);
 }
 .btn.white {
   background: #fff;
   color: var(--main);
-  box-shadow: 0 4px 0 var(--mid);
+}
+.btn.white:hover,
+.btn.white:focus-visible {
+  background: var(--light);
 }
 h2 {
   display: flex;
@@ -169,12 +176,7 @@ h2 .ic {
   margin: 0 auto 8px;
 }
 .voice {
-  background: #fff;
-  border: 1px solid var(--main);
-  border-left-width: 6px;
-  border-radius: 10px;
   padding: 18px 22px;
-  box-shadow: 0 3px 0 var(--line);
   margin: 0 0 18px;
 }
 .voice cite {

@@ -51,6 +51,15 @@ summary {
   text-decoration: none;
   max-width: 100%;
 }
+/* 影つきの線の枠（インタビュー・3つの壁・方向性。LPと情報サイトで共通） */
+.voice,
+.wall div,
+.direction {
+  background: #fff;
+  border: 1px solid var(--main);
+  border-radius: 14px;
+  box-shadow: 0 3px 0 var(--line);
+}
 /* （話を聞かせてください）の帯 */
 .cta {
   background: var(--main);

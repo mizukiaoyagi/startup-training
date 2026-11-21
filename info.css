@@ -102,8 +102,6 @@ blockquote cite {
   gap: 16px;
 }
 .wall div {
-  border: 1px solid #ddd;
-  border-radius: 8px;
   padding: 14px 16px;
 }
 .wall b {
@@ -114,9 +112,6 @@ blockquote cite {
   margin-bottom: 4px;
 }
 .direction {
-  background: #fff;
-  border: 2px solid var(--main);
-  border-radius: 8px;
   padding: 20px;
 }
 .cta {
@@ -175,6 +170,8 @@ details {
   margin: 16px 0;
 }
 .voice blockquote {
+  background: none;
+  border-radius: 0;
   margin: 0;
   flex: 1;
   position: relative;
