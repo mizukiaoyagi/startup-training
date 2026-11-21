@@ -120,7 +120,7 @@ h2 .ic {
   gap: 12px;
   background: #fff;
   border: 2px solid var(--main);
-  box-shadow: none;
+  box-shadow: 0 3px 0 var(--line);
   padding: 16px;
   text-align: left;
 }
@@ -194,7 +194,7 @@ h2 .ic {
   background: var(--light);
   padding: 14px 16px;
   border-radius: 14px;
-  text-align: center;
+  text-align: left;
 }
 .stat b {
   display: block;
@@ -313,6 +313,10 @@ details p {
 }
 .service .cards {
   grid-template-columns: 1fr;
+}
+.service .card .sub {
+  display: block;
+  text-align: left;
 }
 .service > img {
   display: block;
